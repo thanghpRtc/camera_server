@@ -1,0 +1,67 @@
+[property]
+enable = 1
+config-width = 1920
+config-height = 1080
+osd-mode = 2
+display-font-size = 14
+
+[roi-filtering-stream-0]
+enable = 1
+inverse-roi = 0
+class-id = -1
+roi-vung_1 = 1910;600;1727;1072;1036;1072;573;612;1284;340;1686;528;1728;513
+
+[line-crossing-stream-0]
+enable = 1
+mode = balanced
+extended = 0
+class-id = -1
+line-crossing-loi_vao = 1600;158;1713;288;1451;226;1808;184
+
+[direction-detection-stream-0]
+enable = 1
+class-id = -1
+mode = balanced
+direction-direct1 = 380;597;723;454
+
+[roi-filtering-stream-1]
+enable = 1
+inverse-roi = 0
+class-id = -1
+roi-vung_2 = 1903;656;1898;1072;701;1074;453;868;1143;643
+
+[direction-detection-stream-1]
+enable = 1
+class-id = -1
+mode = balanced
+direction-direct2 = 1583;553;1834;573
+
+[roi-filtering-stream-2]
+enable = 1
+inverse-roi = 0
+class-id = -1
+roi-k1 = 886;459;878;605;704;582;733;447
+roi-k2 = 1031;473;1028;615;850;599;865;452
+roi-k3 = 1174;480;1181;628;1003;612;1001;474
+roi-k4 = 880;629;875;728;687;716;698;618
+roi-k5 = 1041;646;1030;737;851;730;859;635
+roi-k6 = 1189;639;1178;738;999;731;1007;636
+
+[line-crossing-stream-2]
+enable = 1
+mode = balanced
+extended = 0
+class-id = -1
+line-crossing-line_3 = 186;192;461;192;317;128;258;357
+
+[roi-filtering-stream-3]
+enable = 1
+inverse-roi = 0
+class-id = -1
+roi-box_1 = 583;452;783;452;783;585;583;585
+roi-box2 = 752;461;952;461;952;598;752;598
+roi-box3 = 935;452;1135;452;1135;603;935;603
+
+[optionConfig]
+server_id = 0
+

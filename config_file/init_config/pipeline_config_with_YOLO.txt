@@ -1,0 +1,117 @@
+[tiled]
+enable=1
+rows=1
+columns=2
+width=1920
+height=540
+gpu_id=0
+nvbuf_memory_type=0
+
+[source_0]
+enable=1
+#Type - 1=CameraV4L2 2=URI 3=MultiURI
+type=4
+gpu_id=0
+uri=rtsp://admin:rtc12345@192.168.5.10/Streaming/channels/101/
+camera_width=1920
+camera_height=1080
+camera_fps_n=30
+camera_fps_d=1
+rtsp_reconnect_interval_sec=30
+rtsp_reconnect_attempts=4
+
+[source_1]
+enable=1
+#Type - 1=CameraV4L2 2=URI 3=MultiURI
+type=4
+gpu_id=0
+uri=rtsp://admin:rtc12345@192.168.5.12/Streaming/channels/101/
+camera_width=1920
+camera_height=1080
+camera_fps_n=30
+camera_fps_d=1
+rtsp_reconnect_interval_sec=30
+rtsp_reconnect_attempts=4
+
+[sink-display]
+enable=1
+sync=0
+source_id=0
+gpu_id=0
+nvbuf_memory_type=0
+qos=0
+
+[sink-rtsp]
+enable=0
+  #1=h264 2=h265
+codec=H265
+  #encoder type 0=Hardware 1=Software
+enc_type=0
+sync=0
+bitrate=4000000
+  #H264 Profile - 0=Baseline 2=Main 4=High
+  #H265 Profile - 0=Main 1=Main10
+profile=0
+  # set below properties in case of RTSPStreaming
+rtsp_port=8554
+udp_port=5400
+host=224.224.255.255
+qos=0
+
+[osd]
+enable=1
+gpu_id=0
+border_width=1
+text_size=15
+  #value changed
+font=Serif
+show_clock=0
+clock_x_offset=800
+clock_y_offset=820
+clock_text_size=12
+nvbuf_memory_type=0
+process_mode=0
+display_text=1
+
+[streammux]
+gpu_id=0
+  ##Boolean property to inform muxer that sources are live
+live_source=1
+buffer_pool_size=4
+batch_size=2
+  ##time out in usec, to wait after the first buffer is available
+  ##to push the batch even if the complete batch is not formed
+batched_push_timeout=100000
+  ## Set muxer output width and height
+width=1920
+height=1080
+  ##Enable to maintain aspect ratio wrt source, and allow black borders, works
+  ##along with width, height properties
+enable_padding=0
+nvbuf_memory_type=0
+
+[tracker]
+file=./config_file/tracker_config/dsnvanalytics_tracker_config.txt
+
+[msgbroker]
+#Type - 1=kafka 2=AMQP 3=MQTT 4=UDP
+type=1
+msgconv_file=./config_file/msgBroker_config/dstest4_msgconv_config.txt
+msgbroker_file=./config_file/msgBroker_config/cfg_amqp.txt
+lib_file=/opt/nvidia/deepstream/deepstream-6.1/lib/libnvds_amqp_proto.so
+
+
+
+[analytic]
+file=./config_file/analytic_config/config_nvdsanalytics.txt
+
+[pgie]
+file=./config_infer_primary_yoloV5.txt
+interval=2
+
+
+
+
+
+
+

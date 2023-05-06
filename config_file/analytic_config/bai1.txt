@@ -1,0 +1,18 @@
+Châu : 0946233326
+hệ màu dùng CMYK dùng trong in ấn
+ctril+0 mo thu muc
+z, ctril + zôm, alt + con lăn
+H di chuyển vùng làm việc
+F full màn hinhd
+alt + backspace tô màu
+T chuyển mặc định màu đen trắng
+ctril backspace tô nền dưới
+ctril + dbỏ vùng trọn
+ctril + sift+ alt+ n tạo layer mới
+ctril + [ lên một lớp
+ctril + ] xuống một lớp
+ctril + shift + [ cho layer len tren cung
+ctril + G group cac layer voi nhau
+ctril T resize, xoay  doi tuong
+
+-để lấy giao hai layer, click + silf vào layer 1, sau đó ctrl + shift + alt  click vào layer thứ 2 để lấy giao hai vùng chọn

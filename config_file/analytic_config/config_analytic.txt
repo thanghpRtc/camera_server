@@ -1,0 +1,41 @@
+[property]
+enable = 1
+config-width = 1920
+config-height = 1080
+osd-mode = 2
+display-font-size = 12
+
+[roi-filtering-stream-0]
+enable = 1
+inverse-roi = 0
+class-id = -1
+roi-box_cam1 = 1058;174;955;313;779;195;909;126
+
+[roi-filtering-stream-1]
+enable = 1
+inverse-roi = 0
+class-id = -1
+roi-box_cam2 = 1023;814;982;944;833;871;865;749;943;736
+
+[roi-filtering-stream-2]
+enable = 1
+inverse-roi = 0
+class-id = -1
+roi-box1 = 1285;749;1091;740;1094;647;1277;655
+roi-box2 = 1131;746;937;737;940;644;1123;652
+roi-box3 = 972;739;778;730;781;637;964;645
+roi-box4 = 1286;647;1092;638;1095;545;1278;553
+roi-box5 = 1125;634;931;625;934;532;1117;540
+roi-box6 = 975;625;781;616;784;523;967;531
+
+[roi-filtering-stream-3]
+enable = 1
+inverse-roi = 0
+class-id = -1
+roi-box1cam4 = 795;733;523;716;547;539;806;540
+roi-box2cam4 = 993;746;721;729;745;552;1004;553
+roi-box3cam4 = 1207;752;935;735;950;555;1218;559
+
+[optionConfig]
+server_id = 0
+

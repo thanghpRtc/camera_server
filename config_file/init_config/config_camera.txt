@@ -1,0 +1,123 @@
+[tracker]
+file = ./config_file/tracker_config/dsnvanalytics_tracker_config.txt
+
+[sink-rtsp]
+enable = 0
+codec = H265
+enc_type = 0
+sync = 0
+bitrate = 50000
+profile = 0
+rtsp_port = 8551
+udp_port = 5400
+host = 224.224.255.255
+qos = 0
+rtsp_host = 192.168.5.189
+
+[osd]
+enable = 1
+gpu_id = 0
+border_width = 1
+text_size = 15
+font = Serif
+show_clock = 0
+clock_x_offset = 800
+clock_y_offset = 820
+clock_text_size = 12
+nvbuf_memory_type = 0
+process_mode = 0
+display_text = 1
+
+[tiled]
+enable = 1
+rows = 2
+columns = 2
+width = 1920
+height = 1080
+gpu_id = 0
+nvbuf_memory_type = 0
+
+[msgbroker]
+type = 1
+msgconv_file = ./config_file/msgBroker_config/dstest4_msgconv_config.txt
+msgbroker_file = ./config_file/msgBroker_config/cfg_amqp.txt
+lib_file = /opt/nvidia/deepstream/deepstream-6.1/lib/libnvds_amqp_proto.so
+
+[analytic]
+file = ./config_file/analytic_config/config_analytic.txt
+
+[sink-display]
+enable = 1
+sync = 0
+source_id = 0
+gpu_id = 0
+qos = 0
+nvbuf_memory_type = 0
+
+[streammux]
+gpu_id = 0
+live_source = 1
+buffer_pool_size = 4
+batch_size = 4
+batched_push_timeout = 100000
+width = 1920
+height = 1080
+enable_padding = 0
+nvbuf_memory_type = 0
+
+[pgie]
+file = ./config_file/infer_config/config_infer_primary_yoloV8.txt
+interval = 2
+
+[data-server]
+host = 192.168.5.189
+port = 8500
+
+[source_0]
+enable = 1
+type = 4
+gpu_id = 0
+uri = rtsp://admin:rtc12345@192.168.5.10/Streaming/channels/101/
+camera_width = 1920
+camera_height = 1080
+camera_fps_n = 10
+camera_fps_d = 1
+rtsp_reconnect_interval_sec = 30
+rtsp_reconnect_attempts = 4
+
+[source_1]
+enable = 1
+type = 4
+gpu_id = 0
+uri = rtsp://admin:rtc12345@192.168.5.12/Streaming/channels/101/
+camera_width = 1920
+camera_height = 1080
+camera_fps_n = 10
+camera_fps_d = 1
+rtsp_reconnect_interval_sec = 30
+rtsp_reconnect_attempts = 4
+
+[source_2]
+enable = 1
+type = 4
+gpu_id = 0
+uri = rtsp://admin:rtc12345@192.168.5.14/Streaming/channels/101/
+camera_width = 1920
+camera_height = 1080
+camera_fps_n = 10
+camera_fps_d = 1
+rtsp_reconnect_interval_sec = 30
+rtsp_reconnect_attempts = 4
+
+[source_3]
+enable = 1
+type = 4
+gpu_id = 0
+uri = rtsp://admin:rtc12345@192.168.5.2/Streaming/channels/101/
+camera_width = 1920
+camera_height = 1080
+camera_fps_n = 10
+camera_fps_d = 1
+rtsp_reconnect_interval_sec = 30
+rtsp_reconnect_attempts = 4
+

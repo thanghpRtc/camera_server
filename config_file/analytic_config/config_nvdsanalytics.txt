@@ -1,0 +1,36 @@
+[property]
+enable = 1
+config-width = 1920
+config-height = 1080
+osd-mode = 2
+display-font-size = 12
+
+[roi-filtering-stream-0]
+enable = 1
+inverse-roi = 0
+class-id = -1
+roi-robot_area = 1723;1079;1022;1073;575;619;1262;343;1687;531;1725;502;1914;615;1919;820
+roi-vung_san = 1730;497;1687;526;1269;340;1617;182;1914;306;1911;601
+
+[line-crossing-stream-0]
+enable = 1
+mode = strict
+extended = 1
+class-id = -1
+line-crossing-crossing = 529;229;758;450;412;376;761;267
+
+[roi-filtering-stream-1]
+enable = 1
+inverse-roi = 0
+class-id = -1
+roi-cua_vao = 546;586;227;628;226;169;540;173
+roi-cua_ra = 997;231;1228;231;1228;515;997;515
+
+[direction-detection-stream-1]
+enable = 1
+class-id = -1
+mode = balanced
+direction-nam = 422;772;1058;623
+
+[optionConfig]
+server_id = 0

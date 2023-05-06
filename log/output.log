@@ -1,0 +1,68 @@
+2023-05-05 14:31:03,450:INFO:__main__:main:__init__:73:start pipeline
+2023-05-05 14:31:03,466:INFO:__main__:main:run:375:Creating Pipeline 
+ 
+2023-05-05 14:31:03,466:INFO:__main__:main:run:380:Creating streamux 
+ 
+2023-05-05 14:31:03,532:INFO:__main__:main:run:393:Creating source_bin :0
+2023-05-05 14:31:03,532:INFO:__main__:main:run:397:rtsp://admin:rtc12345@192.168.5.10/Streaming/channels/101/
+2023-05-05 14:31:03,532:INFO:__main__:main:create_source_bin:254:rtsp://admin:rtc12345@192.168.5.10/Streaming/channels/101/
+2023-05-05 14:31:03,532:INFO:__main__:main:create_source_bin:255:Creating source bin
+2023-05-05 14:31:03,532:INFO:__main__:main:create_source_bin:260:source-bin-00
+2023-05-05 14:31:03,536:INFO:__main__:main:run:393:Creating source_bin :1
+2023-05-05 14:31:03,536:INFO:__main__:main:run:397:rtsp://admin:rtc12345@192.168.5.12/Streaming/channels/101/
+2023-05-05 14:31:03,536:INFO:__main__:main:create_source_bin:254:rtsp://admin:rtc12345@192.168.5.12/Streaming/channels/101/
+2023-05-05 14:31:03,536:INFO:__main__:main:create_source_bin:255:Creating source bin
+2023-05-05 14:31:03,536:INFO:__main__:main:create_source_bin:260:source-bin-01
+2023-05-05 14:31:03,537:INFO:__main__:main:run:393:Creating source_bin :2
+2023-05-05 14:31:03,537:INFO:__main__:main:run:397:rtsp://admin:rtc12345@192.168.5.14/Streaming/channels/101/
+2023-05-05 14:31:03,537:INFO:__main__:main:create_source_bin:254:rtsp://admin:rtc12345@192.168.5.14/Streaming/channels/101/
+2023-05-05 14:31:03,537:INFO:__main__:main:create_source_bin:255:Creating source bin
+2023-05-05 14:31:03,537:INFO:__main__:main:create_source_bin:260:source-bin-02
+2023-05-05 14:31:03,538:INFO:__main__:main:run:393:Creating source_bin :3
+2023-05-05 14:31:03,538:INFO:__main__:main:run:397:rtsp://admin:rtc12345@192.168.5.2/Streaming/channels/101/
+2023-05-05 14:31:03,538:INFO:__main__:main:create_source_bin:254:rtsp://admin:rtc12345@192.168.5.2/Streaming/channels/101/
+2023-05-05 14:31:03,538:INFO:__main__:main:create_source_bin:255:Creating source bin
+2023-05-05 14:31:03,538:INFO:__main__:main:create_source_bin:260:source-bin-03
+2023-05-05 14:31:03,587:INFO:__main__:main:run:453:192.168.5.189
+2023-05-05 14:31:03,619:INFO:__main__:main:run:524:Linking elements in the Pipeline 
+
+2023-05-05 14:31:03,768:INFO:__main__:main:run:580:
+ *** DeepStream: Launched RTSP Streaming at rtsp://localhost:8551/ds-test ***
+
+
+2023-05-05 14:31:03,778:INFO:__main__:main:run:591:Starting pipeline 
+
+2023-05-05 14:32:01,971:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: source
+2023-05-05 14:32:01,982:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: source
+2023-05-05 14:32:01,998:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: source
+2023-05-05 14:32:02,014:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: source
+2023-05-05 14:32:02,174:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: decodebin0
+2023-05-05 14:32:02,180:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: decodebin1
+2023-05-05 14:32:02,185:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: rtph265depay0
+2023-05-05 14:32:02,201:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: rtph265depay1
+2023-05-05 14:32:02,202:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: h265parse0
+2023-05-05 14:32:02,222:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: h265parse1
+2023-05-05 14:32:02,233:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: capsfilter0
+2023-05-05 14:32:02,244:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: capsfilter1
+2023-05-05 14:32:02,250:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: nvv4l2decoder0
+2023-05-05 14:32:02,266:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: nvv4l2decoder1
+2023-05-05 14:32:02,356:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: decodebin2
+2023-05-05 14:32:02,366:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: rtph265depay2
+2023-05-05 14:32:02,382:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: h265parse2
+2023-05-05 14:32:02,387:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: decodebin3
+2023-05-05 14:32:02,393:INFO:__main__:main:cb_newpad:235:In cb_newpad
+
+2023-05-05 14:32:02,393:INFO:__main__:main:cb_newpad:235:In cb_newpad
+
+2023-05-05 14:32:02,404:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: capsfilter2
+2023-05-05 14:32:02,425:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: rtph265depay3
+2023-05-05 14:32:02,468:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: h265parse3
+2023-05-05 14:32:02,474:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: capsfilter3
+2023-05-05 14:32:02,479:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: nvv4l2decoder2
+2023-05-05 14:32:02,500:INFO:__main__:main:decodebin_child_added:231:Decodebin child added: nvv4l2decoder3
+2023-05-05 14:32:02,730:INFO:__main__:main:cb_newpad:235:In cb_newpad
+
+2023-05-05 14:32:02,730:INFO:__main__:main:cb_newpad:235:In cb_newpad
+
+2023-05-05 16:36:09,988:INFO:__main__:main:run:601:Exiting app
+
