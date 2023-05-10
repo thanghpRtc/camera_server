@@ -95,6 +95,10 @@ class Pgie(BaseModel):
     file:str
     interval: str
 
+class DataServer_model(BaseModel):
+    host:str
+    port:str
+
 
    
 

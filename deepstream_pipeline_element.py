@@ -17,12 +17,12 @@ class Tracker_element():
         self.element = Gst.ElementFactory.make("nvtracker", "tracker")
         if not self.element:
             logging.error("Unable to create tracker")
-        print("Create nvtracker")
+        logging.info("Create nvtracker")
         #Set property for tracker
-        print((f"tracker file: {config_model.file}"))
+        logging.info((f"tracker file: {config_model.file}"))
         tracker_config = configparser.ConfigParser()
         tracker_config.read(config_model.file)
-        print((f"tracker file: {tracker_config.sections()}"))
+        logging.info((f"tracker file: {tracker_config.sections()}"))
         tracker_config.sections()
 
         for key in tracker_config['tracker']:
@@ -54,7 +54,7 @@ class Tiler_element():
         self.element = Gst.ElementFactory.make("nvmultistreamtiler", "nvtiler")
         if not self.element:
             logging.error("Unable to create tiler")
-        print("Create nvmultistreamtiler")
+        logging.info("Create nvmultistreamtiler")
 
         #Set tiler property
         self.element.set_property('width', int(config_model.width))
@@ -69,7 +69,7 @@ class Filter_element():
         self.filter = Gst.ElementFactory.make("capsfilter", "filter1")
         if not self.filter:
             logging.error("Unable to create filter")
-        print("Create filter")
+        logging.info("Create filter")
 
 
 class Sink_RTSP_element():
@@ -78,7 +78,7 @@ class Sink_RTSP_element():
         if not self.element:
             logging.error("Unable to create sink_rtsp")
 
-        print("Create sink_rtsp")
+        logging.info("Create sink_rtsp")
         # self.element.set_property("host",config_model.host)
         # self.element.set_property("port", int(config_model.rtsp_port))
         # self.element.set_property("async", False)
@@ -96,7 +96,7 @@ class Analytic_element():
         self.element = Gst.ElementFactory.make("nvdsanalytics", "analytics")
         if not self.element:
             logging.error("Unable to create analytic")
-        print("Create analytic element")
+        logging.info("Create analytic element")
 
         self.element.set_property("config-file", config_model.file)
 
@@ -105,7 +105,7 @@ class Streammux_element():
         self.element = Gst.ElementFactory.make("nvstreammux", "Stream-muxer")
         if not self.element:
             logging.error("Unable to create streammux")
-        print("Create streammux element")
+        logging.info("Create streammux element")
         self.element.set_property("width", int(config_model.width))
         self.element.set_property("height", int(config_model.height))
         self.element.set_property("batch-size", int(config_model.batch_size))
@@ -119,7 +119,7 @@ class Pgie_element():
         if not self.element:
             logging.error("Cannot create pgie")
 
-        print("Create Pgie element")
+        logging.info("Create Pgie element")
         self.element.set_property("config-file-path", config_model.file)
         pgie_batch_size = self.element.get_property("batch_size")
 
@@ -133,12 +133,12 @@ class VideoConverter_element():
         if not self.element:
             logging.error("Unable to create nvvidconv") 
 
-        print("Create nvvidconv")
+        logging.info("Create nvvidconv")
 
 class Create_element():
     def __init__(self, factory_name, name, detail="", add =True):
         
-        print(f"Create {factory_name} element")
+        logging.info(f"Create {factory_name} element")
 
         self.element = Gst.ElementFactory.make(factory_name, name)
 
@@ -146,7 +146,7 @@ class Create_element():
 
             logging.error(f"Cannot create {factory_name} element")
 
-        print(f"Creating {factory_name} element")
+        logging.info(f"Creating {factory_name} element")
 
 
 
@@ -155,7 +155,7 @@ class OSD_element():
         self.element= Gst.ElementFactory.make("nvdsosd", "onscreendisplay")
         if not self.element:
             logging.error("Cannot create pgie")
-        print("Create Pgie element")
+        logging.info("Create Pgie element")
 
         self.element.set_property('process-mode',int(config_model.process_mode))
         self.element.set_property('display-text',int(config_model.display_text))
@@ -165,7 +165,7 @@ class Sink_display_element():
         self.element = Gst.ElementFactory.make("nveglglessink", "nvvideo-renderer")
         if not self.element:
             logging.error("Cannot create nveglglessink")
-        print("Create nveglglessink element")
+        logging.info("Create nveglglessink element")
 
         self.element.set_property("sync", int(config_model.sync))
         self.element.set_property("qos",int(config_model.qos))
@@ -174,11 +174,11 @@ class Encoder_element():
     def __init__(self, codec_type = "H265",bitrate = 4000000, is_aarch64 = False):
         if codec_type == "H264" or codec_type == "h264":
             self.element = Gst.ElementFactory.make("nvv4l2h264enc", "encoder")
-            print("Create H264 Encoder")
+            logging.info("Create H264 Encoder")
 
         elif codec_type == "H265" or codec_type == "h265":
             self.element = Gst.ElementFactory.make("nvv4l2h265enc", "encoder")
-            print("Create H265 Encoder")
+            logging.info("Create H265 Encoder")
 
         if not self.element:
             logging.error("Unable to create encoder")
@@ -195,10 +195,10 @@ class Rtppay_element():
     def __init__(self, codec_type = "H265"):
         if codec_type == "H264" or codec_type == "h264":
             self.element = Gst.ElementFactory.make("rtph264pay", "rtppay")
-            print("Creating H264 rtppay")
+            logging.info("Creating H264 rtppay")
         elif codec_type == "H265" or codec_type == "h265":
             self.element = Gst.ElementFactory.make("rtph265pay", "rtppay")
-            print("Creating H265 rtppay")
+            logging.info("Creating H265 rtppay")
         if not self.element:
             logging.error(" Unable to create rtppay")
 
@@ -221,7 +221,7 @@ class Msgbroker_element():
         self.element.set_property('config', config_model.msgbroker_file)
         self.element.set_property('conn-str', "localhost;2181;testTopic")
 
-        print("create nvmsgbroker")
+        logging.info("create nvmsgbroker")
         
 
 
