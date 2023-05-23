@@ -13,18 +13,21 @@ class AMQP():
         self.exchange = config_data['exchange']
         self.period = int(config_data['period'])
         self.host = config_data['hostname']
+        print("host : {}".format(self.host))
         self.number_update_camera = int(config_data['number_camera_data'])
         self.port = config_data['port']
         self.topic = config_data['topic']
         credentials = pika.PlainCredentials(username = self.username, password = self.password)
         connect_param = pika.ConnectionParameters(
-            host= self.host,
+            host= self.host, port = self.port,
             credentials=credentials
         )
         try:
             self.connection = pika.BlockingConnection(connect_param)
+            logging.info("Connect success")
+            print("success : {}".format(self.host))
         except:
-            logging.info("Cannot connect to AMQP server")
+            logging.error("Cannot connect to AMQP server")
             sys.exit()
 
         self.channel = self.connection.channel()

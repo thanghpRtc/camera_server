@@ -381,7 +381,7 @@ class Pipeline():
         # Create nvstreammux instance to fo_wrap_prob
         streammux = Streammux_element(self.pipeline_config.streammux).element
         pipeline.add(streammux)
-        camera_check = Update_camera_status(self.pipeline_config.sink_rtsp.rtsp_host)
+        camera_check = Update_camera_status(server_IP = self.pipeline_config.sink_rtsp.rtsp_host, server_port = 7894)
         list_disconnect = camera_check.Check_disconnect_camera(CheckConnect_Response_ping)
         if number_sources == 0:
             sys.stderr.write("Please add stream RTSP to run")

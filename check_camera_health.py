@@ -40,6 +40,7 @@ class CheckConnect_Response_API(CheckConnectReponse_method):
 
 class Update_camera_status():
     def __init__(self, checking_interval = 5, server_IP = "192.168.5.189", server_port = 7894):
+        print("ip :{}".format(server_IP))
         self.server_client = Camera_data_request(server_IP = server_IP, server_port = server_port)
         self.all_cameras = self.server_client.Get_camera_of_server(server_id = 0)
         self.checking_interval = checking_interval
@@ -80,7 +81,7 @@ class Update_camera_status():
 
 if __name__ == "__main__":
 
-    check_camera = Update_camera_status(server_IP = "192.168.5.189", server_port = 7894)
+    check_camera = Update_camera_status(server_IP = "192.168.5.5", server_port = 7894)
     
     check_camera.run_checking(CheckConnect_Response_ping)
 
