@@ -15,11 +15,11 @@
 # limitations under the License.
 ################################################################################
 [message-broker]
-password = 1999
+password = rtc
 #optional
-hostname = 192.168.5.189
-username = vietthang
-port = 5672
+hostname = 192.168.5.5
+username = rtcvn
+port = 9991
 exchange = ds_exchange
 topic = ds_topic
 period=10

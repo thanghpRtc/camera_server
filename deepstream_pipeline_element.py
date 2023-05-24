@@ -9,7 +9,7 @@ import logging
 import pika
 
 logging.basicConfig(level = logging.ERROR,
-                    filename = '/home/rtc/deepstream_logging/deepstream_log.log',
+                    filename = './log/deepstream_log.log',
                     format = "%(asctime)s %(levelname)s %(message)s")
 
 class Tracker_element():
