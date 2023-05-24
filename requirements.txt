@@ -1,0 +1,5 @@
+pika
+pydantic
+opencv-python
+pytest
+hikvisionapi
